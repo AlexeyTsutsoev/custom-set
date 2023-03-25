@@ -1,0 +1,33 @@
+{
+  "name": "custom-set",
+  "version": "1.0.0",
+  "description": "class for working with array of unique object",
+  "main": "index.ts",
+  "scripts": {
+    "test": "jest --config jest.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexeyTsutsoev/custom-set.git"
+  },
+  "keywords": [
+    "Set"
+  ],
+  "author": "Alexey Tsutsoev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlexeyTsutsoev/custom-set/issues"
+  },
+  "homepage": "https://github.com/AlexeyTsutsoev/custom-set#readme",
+  "dependencies": {
+    "@babel/core": "^7.21.3",
+    "babel-jest": "^29.5.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.0",
+    "@types/node": "^18.15.9",
+    "jest": "^29.5.0",
+    "ts-jest": "^29.0.5",
+    "typescript": "^5.0.2"
+  }
+}
