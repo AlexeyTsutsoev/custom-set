@@ -5,5 +5,4 @@ module.exports = {
     "^.+\\.ts?$": "ts-jest",
   },
   transformIgnorePatterns: ["<rootDir>/node_modules/"],
-  collectCoverage: true,
 };
