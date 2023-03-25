@@ -9,7 +9,7 @@ describe("Tests for Custom Set", () => {
     expect(new CustomSet(input).array).toStrictEqual(output);
   });
 
-  it("should be true and updated", () => {
+  it("should be true and added new", () => {
     const input = new CustomSet([MOCK_OBJ1, MOCK_OBJ2]);
     const output = input.add(MOCK_OBJ3);
 
@@ -17,12 +17,28 @@ describe("Tests for Custom Set", () => {
     expect(input.array).toStrictEqual([MOCK_OBJ1, MOCK_OBJ2, MOCK_OBJ3]);
   });
 
-  it("should be true and updated", () => {
+  it("should be false and NOT added new", () => {
+    const input = new CustomSet([MOCK_OBJ1, MOCK_OBJ2]);
+    const output = input.add(MOCK_OBJ2);
+
+    expect(output).toBeFalsy();
+    expect(input.array).toStrictEqual(input.array);
+  });
+
+  it("should be true and removed", () => {
     const input = new CustomSet([MOCK_OBJ1, MOCK_OBJ2]);
     const output = input.removeItemBy("1");
 
     expect(output).toBeTruthy();
     expect(input.array).toStrictEqual([MOCK_OBJ2]);
+  });
+
+  it("should be falsy and NOT removed", () => {
+    const input = new CustomSet([MOCK_OBJ1, MOCK_OBJ2]);
+    const output = input.removeItemBy("123");
+
+    expect(output).toBeFalsy();
+    expect(input.array).toStrictEqual(input.array);
   });
 
   it("should return valid result", () => {
