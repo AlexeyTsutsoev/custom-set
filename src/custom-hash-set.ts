@@ -8,7 +8,6 @@ export class CustomHashSet<T extends Identifiable> {
 
     for (let item of array) {
       if (typeof result[item.id] === "undefined") {
-        console.log(item);
         result[item.id] = item;
       }
     }
